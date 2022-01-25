@@ -1,22 +1,20 @@
 
 import React from "react";
+import { hot } from 'react-hot-loader/root';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { css } from "@emotion/react";
+import Weather from "./components/Weather";
 
 class App extends React.Component {
   render() {
     const { name } = this.props;
     return (
       <>
-        <h1>
-          Hello {name}
-        </h1>
-        <button type="button" class="btn btn-primary">
-          This is a bootstrap button
-        </button>
+        <Weather/>
       </>
     );
   }
 }
 
-export default App;
+export default hot(App);
